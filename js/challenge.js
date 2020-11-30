@@ -69,13 +69,13 @@ pause_id.addEventListener("click", function () {
     };
 
     // user can leave comments
-    comment_id.addEventListener("submit", function (a) {
+    document.getElementById("submit").addEventListener("click", function(a){
         //stop default action of submit button
         a.preventDefault();
-        var comment = document.querySelector('input#comment-input').value
-        var commentsList = document.querySelector('.comments')
-        var p = document.createElement("p");
-        var node = document.createTextNode(comment)
+        let comment = document.querySelector('input#comment-input').value
+        let commentsList = document.querySelector('.comments')
+        let p = document.createElement("p");
+        let node = document.createTextNode(comment)
         p.appendChild(node);
         commentsList.appendChild(p);
         document.querySelector('input#comment-input').value = ''
